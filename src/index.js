@@ -17,6 +17,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NoExiste from './components/NoExiste';
 import Login from './components/Autenticar';
 import EditarProyecto from './components/EditarProyecto';
+import CrearUsuario from './components/CrearUsuario';
 
 
 const httpLink = new HttpLink({ uri: 'http://localhost:9092/graphql' });
@@ -44,6 +45,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route exact path="/usuario/registro" component={CrearUsuario} />
         <Route exact path="/menu" component={Menu} />
         <Route exact path="/usuario" component={ListaUsuarios} />
         <Route exact path="/proyecto" component={CrearProyecto} />

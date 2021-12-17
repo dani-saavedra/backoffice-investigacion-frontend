@@ -37,7 +37,9 @@ const Login = () => {
             his.push("/menu")
         }
     }
-
+    const registroUsuarioNuevo = () => {
+        his.push("/usuario/registro")
+    }
     return <div>
         <form>
             <h3>Autenticar</h3>
@@ -48,7 +50,9 @@ const Login = () => {
                 value={pass}
                 onChange={changeClave} />
 
-            <button onClick={autenticar}>Log In</button>
+            <button className="btn btn-primary" onClick={autenticar}>Log In</button>
+
+            <button className="btn btn-primary" onClick={registroUsuarioNuevo}>Registro Usuario Nuevo</button>
         </form>
     </div>
 }
