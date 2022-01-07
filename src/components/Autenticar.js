@@ -43,7 +43,7 @@ const Login = () => {
     return <div>
         <form>
             <h3>Autenticar</h3>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="usernam">Username</label>
             <input type="text" placeholder="Email" id="username" ref={u => user = u} />
             <label htmlFor="password">Password</label>
             <input type="password" placeholder="Password" id="password"

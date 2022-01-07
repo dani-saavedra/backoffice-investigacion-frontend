@@ -3,6 +3,7 @@ import {
   gql
 } from "@apollo/client";
 import { Link } from "react-router-dom";
+import { Table} from "reactstrap"
 
 const Proyectos = () => {
   const PROYECTOS = gql`
@@ -35,20 +36,31 @@ const Proyectos = () => {
     </tr>
   ));
 
-  return (<div>
-    <table className="table">
-      <thead>
-        <tr>
-          <th>Nombre Proyecto</th>
-          <th>Lider del Proyecto</th>
-          <th>Presupuesto</th>
-          <th>Acciones</th>
+  return (<Table >
+    <thead>
+   
+      <tr>
+        <th>
+          Proyecto 
+        </th>
+        <th>
+          Lider 
+        </th>
+        <th>
+          Presupuesto
+        </th>
+        <th>
+          Acciones 
+        </th>
         </tr>
-      </thead>
-      <tbody>
-        {datosTabla}
-      </tbody></table>
-  </div>)
+       
+    </thead>
+    <tbody>
+    </tbody>
+    {datosTabla}
+  </Table>)
 }
+
+
 
 export default Proyectos
